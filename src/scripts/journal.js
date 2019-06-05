@@ -32,25 +32,23 @@ const collectionJournalEntries = [
   }
 ];
 
-/*
-    Purpose: To create, and return, a string template that
-    represents a single journal entry object as HTML
+let journalLog = document.querySelector(".entryLog");
 
-    Arguments: journalEntry (object)
-*/
-const makeJournalEntryComponent = (journalEntry) {
+function makeJournalEntryComponent(journalEntry) {
   return `
-<div class="journal_entry"
+<div class="journal_entry">
   <h2>Date of Entry:</h2>
-  <div>${entry_date}</div>
+  <div>${journalEntry.entry_date}</div>
   <h2>Concepts Covered:</h2>
-  <div>${entry_title}</div>
+  <div>${journalEntry.entry_title}</div>
   <h2>Journal Entry:</h2>
-  <div>${entry_title}</div>
+  <div>${journalEntry.entry_text}</div>
   <h2>How are you feeling today?</h2>
-  <div>${entry_mood}</div>
+  <div>${journalEntry.entry_mood}</div>
 </div>
+  `;
+}
 
-
-  `
+for (let i = 0; i < collectionJournalEntries.length; i++) {
+  journalLog.innerHTML += makeJournalEntryComponent(collectionJournalEntries[i])
 }
