@@ -1,4 +1,43 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Journal Entry Input Box */
+
+form {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
 fieldset {
   display: flex;
   flex-direction: column;
+  width: 450px;
+  padding: 10px;
+}
+
+button {
+  margin: 10px;
+}
+
+/* Modyify Journal Entry Display */
+
+h1 {
+  align-content: center
+}
+
+.journal_entry {
+  border: 5px double black;
+  width: 500px;
+  margin: 10px 0px 10px 0;
+  padding: 10px;
+}
+
+.entryLog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
