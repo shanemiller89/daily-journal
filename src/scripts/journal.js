@@ -9,16 +9,17 @@ API.getJournalEntries().then(entries_obj => {
 const submitBtn = document.querySelector(".submit-btn");
 
 submitBtn.addEventListener("click", () => {
-  formValidation();
-  formValidationChar();
-  if (formValidation === true && formValidationChar === true) {
+  event.preventDefault(); //Prevents page from refreshing
+  let formVal = formValidation();
+  let formValChar = formValidationChar();
+  if (formVal === true && formValChar === true) {
     let newJournalEntry = createNewEntry(journalDateInput, conceptsCoveredInput, journalEntryInput, moodSelectInput);
     postJournalEntry(newJournalEntry);
+
   } else {
     alert ("Please finish filling out your Journal!")
-    event.preventDefault(); //Prevents page from refreshing
   }
-})
+})  // formValidationChar();
 
 // -- Input Fields -- //
 let journalDateInput = document.querySelector("#journalDate");
@@ -26,6 +27,8 @@ let conceptsCoveredInput = document.querySelector("#conceptsCovered");
 let journalEntryInput = document.querySelector("#journalEntry");
 let moodSelectInput = document.querySelector("#moodSelect");
 
+if (conceptsCoveredInput.value.length > 40)
+ret
 
 // -- Factory function for journal entries -- //
 
@@ -45,29 +48,29 @@ function formValidation() {
     journalDateInput.focus() ;
     return false;
   }
-  if(conceptsCoveredInput.value == "") {
+  else if(conceptsCoveredInput.value == "") {
     alert("Please provide what was covered!");
     conceptsCoveredInput.focus() ;
     return false;
   }
-  if(journalEntryInput.value == "") {
+  else if(journalEntryInput.value == "") {
     alert("Please provide a 'Journal Entry!'");
     journalEntryInput.focus() ;
     return false;
   }
-  if(moodSelectInput.value == "") {
+  else if(moodSelectInput.value == "") {
     alert("Please provide your mood!");
     moodSelectInput.focus() ;
     return false;
   }
-  return( true );
+  else {
+    return true ;
+  }
 }
 
 function formValidationChar () {
-
-  let letterNumberCharacter = /^[0-9a-zA-Z(){}:;.]+$/;
-
-  if ((conceptsCoveredInput.value.match(letterNumberCharacter)) && (journalEntryInput.value.match(letterNumberCharacter))) {
+  let allowedChar = /^[0-9a-zA-Z()/{}:;. ]+$/;
+  if ((conceptsCoveredInput.value.match(allowedChar)) && (journalEntryInput.value.match(allowedChar))) {
     return true;
   } 
   else {
