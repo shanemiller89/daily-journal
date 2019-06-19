@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+/* Style Button */
+button {
+  height: 60px;
+  width: 200px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
 /* Journal Entry Input Box */
 
 form {
@@ -18,8 +26,8 @@ fieldset {
   padding: 10px;
 }
 
-button {
-  margin: 10px;
+label {
+  padding: 5px;
 }
 
 /* Modyify Journal Entry Display */
