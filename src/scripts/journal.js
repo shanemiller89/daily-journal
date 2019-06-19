@@ -10,11 +10,13 @@ const submitBtn = document.querySelector(".submit-btn");
 
 submitBtn.addEventListener("click", () => {
   formValidation();
-  if (formValidation === true) {
+  formValidationChar();
+  if (formValidation === true && formValidationChar === true) {
     let newJournalEntry = createNewEntry(journalDateInput, conceptsCoveredInput, journalEntryInput, moodSelectInput);
     postJournalEntry(newJournalEntry);
   } else {
     alert ("Please finish filling out your Journal!")
+    event.preventDefault(); //Prevents page from refreshing
   }
 })
 
@@ -59,6 +61,19 @@ function formValidation() {
     return false;
   }
   return( true );
+}
+
+function formValidationChar () {
+
+  let letterNumberCharacter = /^[0-9a-zA-Z(){}:;.]+$/;
+
+  if ((conceptsCoveredInput.value.match(letterNumberCharacter)) && (journalEntryInput.value.match(letterNumberCharacter))) {
+    return true;
+  } 
+  else {
+    alert("Improper characters used");
+    return false;
+  }
 }
 
 // -- Post Data to Database -- //
