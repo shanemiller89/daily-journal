@@ -88,5 +88,5 @@ function postJournalEntry(entry) {
         "Content-Type": "application/json"
     },
     body: JSON.stringify(entry)
-})
+});
 }
