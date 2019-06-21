@@ -29,7 +29,7 @@
       </fieldset>
       <fieldset>
         <label for="moodSelect">How are you feeling today?</label>
-        <select>
+        <select id="moodSelect">
           <option value="happy">Happy</option>
           <option value="sad">Sad</option>
           <option value="frusterated">Frusterated</option>
@@ -37,15 +37,12 @@
           <option value="neutral">Neutral</option>
         </select>
       </fieldset>
-      <button type="submit">Record Journal Entry</button>
+      <button type="submit" class="submit-btn">Record Journal Entry</button>
     </form>
-    <div><h1>Journal Entry Log</h1></div>
+    <div class="journal_log_header"><h1>Journal Entry Log</h1></div>
     <article class="entryLog">
       
     </article>
-    <script src="scripts/entryComponent.js"></script>
-    <script src="scripts/entriesDOM.js"></script>
-    <script src="scripts/data.js"></script>
-    <script src="scripts/journal.js"></script>
+    <script type="module" src="scripts/journal.js"></script>
   </body>
 </html>

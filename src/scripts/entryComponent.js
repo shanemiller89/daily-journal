@@ -1,7 +1,7 @@
 // -- Creates Entries -- //
 
 const BUILD = {
-    makeJournalEntryComponent (journalEntry) {
+    makeJournalEntryComponent: function (journalEntry) {
         return `
         <div class="journal_entry">
           <h2>Date of Entry:</h2>
@@ -16,3 +16,6 @@ const BUILD = {
           `;
     }
 };
+
+
+export { BUILD }

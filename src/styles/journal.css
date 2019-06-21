@@ -32,6 +32,11 @@ label {
 
 /* Modyify Journal Entry Display */
 
+.journal_log_header {
+  display: flex;
+  margin: 20px;
+}
+
 h1 {
   align-content: center
 }
