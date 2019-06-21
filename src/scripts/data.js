@@ -1,4 +1,3 @@
-// -- Grabs journal data from entries database --//
 
 const API = {
   getJournalEntries: function() {
@@ -15,11 +14,6 @@ const API = {
       body: JSON.stringify(entry)
     });
   },
-  saveJournalEntry: function(entry) {
-    return API.postJournalEntry(entry)
-      .then(API.getJournalEntries)
-      .then(entries_obj => {
-        RENDER.insertComponentSave(entries_obj);
-      });
-  }
 };
+
+export {API}

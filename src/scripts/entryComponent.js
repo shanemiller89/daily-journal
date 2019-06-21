@@ -16,3 +16,6 @@ const BUILD = {
           `;
     }
 };
+
+
+export { BUILD }

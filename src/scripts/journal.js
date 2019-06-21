@@ -1,4 +1,14 @@
-// -- Grabs date, changes to object, inserts data into DOM --//
+import { API } from "./data.js";
+import {
+  UTILITY,
+  journalDateInput,
+  conceptsCoveredInput,
+  journalEntryInput,
+  moodSelectInput
+} from "./utility.js";
+import { RENDER } from "./entriesDOM.js";
+
+// -- Grabs data, changes to object, inserts data into DOM --//
 
 API.getJournalEntries().then(entries_obj => {
   RENDER.insertComponent(entries_obj);
@@ -9,21 +19,19 @@ API.getJournalEntries().then(entries_obj => {
 const submitBtn = document.querySelector(".submit-btn");
 
 submitBtn.addEventListener("click", () => {
-  // event.preventDefault(); //Prevents page from refreshing
+  event.preventDefault(); //Prevents page from refreshing
   let formVal = UTILITY.formValidation();
   let formValChar = UTILITY.formValidationChar();
-  if (formVal === true && formValChar === true) {
-    let newJournalEntry = UTILITY.createNewEntry(journalDateInput, conceptsCoveredInput, journalEntryInput, moodSelectInput);
-    // API.saveJournalEntry(newJournalEntry);
-    API.postJournalEntry(newJournalEntry);
-
+  let formValConLen = UTILITY.formValidationConceptLength();
+  if (formVal === true && formValChar === true && formValConLen === true) {
+    let newJournalEntry = UTILITY.createNewEntry(
+      journalDateInput,
+      conceptsCoveredInput,
+      journalEntryInput,
+      moodSelectInput
+    );
+    RENDER.saveJournalEntry(newJournalEntry);
   } else {
-    alert ("Please finish filling out your Journal!")
+    alert("Please finish filling out your Journal!");
   }
 });
-
-// -- Input Fields -- //
-let journalDateInput = document.querySelector("#journalDate");
-let conceptsCoveredInput = document.querySelector("#conceptsCovered");
-let journalEntryInput = document.querySelector("#journalEntry");
-let moodSelectInput = document.querySelector("#moodSelect");

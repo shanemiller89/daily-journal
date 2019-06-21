@@ -22,25 +22,18 @@
       "id": 3
     },
     {
-      "entry_date": "2019-05-29",
-      "entry_title": "dfdfdf",
-      "entry_text": "fffffffffffffffff",
-      "entry_mood": "sad",
+      "entry_date": "2019-06-26",
+      "entry_title": "aaa",
+      "entry_text": "aaa",
+      "entry_mood": "happy",
       "id": 4
     },
     {
-      "entry_date": "2019-06-19",
-      "entry_title": "vvvvvvvvvvvvvv",
-      "entry_text": "vvvvvvvvvvvvvvvvvvvvvvvvv",
-      "entry_mood": "confident",
+      "entry_date": "2019-06-04",
+      "entry_title": "Test",
+      "entry_text": "Test",
+      "entry_mood": "happy",
       "id": 5
-    },
-    {
-      "entry_date": "2019-06-26",
-      "entry_title": "vvvvvvvvvvvvvvvvvvvv",
-      "entry_text": "vvvvvvvvvvvvv",
-      "entry_mood": "frusterated",
-      "id": 6
     }
   ]
 }
