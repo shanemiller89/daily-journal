@@ -6,9 +6,9 @@ import {
   journalEntryInput,
   moodSelectInput
 } from "./utility.js";
-import { RENDER } from "./entriesDOM.js";
+import { RENDER, journalLog } from "./entriesDOM.js";
 
-// -- Grabs data, changes to object, inserts data into DOM --//
+// -- Initial Load --//
 
 API.getJournalEntries().then(entries_obj => {
   RENDER.insertComponent(entries_obj);
@@ -34,4 +34,20 @@ submitBtn.addEventListener("click", () => {
   } else {
     alert("Please finish filling out your Journal!");
   }
+});
+
+//--Radio Filter --//
+
+const radioBtns = document.getElementsByName("moodFilter");
+
+radioBtns.forEach( radioBtn => {
+    radioBtn.addEventListener("click", event => {
+        const mood = event.target.value;
+        API.getJournalEntries()
+        .then(entries_obj => {
+          journalLog.innerHTML = "";
+          let filteredEntry = entries_obj.filter( entry => entry.entry_mood === mood)
+          RENDER.insertComponent(filteredEntry);
+        })
+    })
 });
