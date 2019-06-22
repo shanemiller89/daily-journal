@@ -30,19 +30,76 @@
       <fieldset>
         <label for="moodSelect">How are you feeling today?</label>
         <select id="moodSelect">
-          <option value="happy">Happy</option>
-          <option value="sad">Sad</option>
-          <option value="frusterated">Frusterated</option>
-          <option value="confident">Confident</option>
-          <option value="neutral">Neutral</option>
+          <option value="Happy">Happy</option>
+          <option value="Sad">Sad</option>
+          <option value="Frustrated">Frustrated</option>
+          <option value="Confident">Confident</option>
+          <option value="Neutral">Neutral</option>
         </select>
       </fieldset>
       <button type="submit" class="submit-btn">Record Journal Entry</button>
     </form>
+    <br />
+    <form>
+      <fieldset>
+        <legend>Filter Journals By Mood</legend>
+        <div class="moodContainer">
+          <div class="moodItem">
+            <label for="happyfilter">Happy</label>
+            <input
+              type="radio"
+              name="moodFilter"
+              id="happyfilter"
+              value="Happy"
+              class="moodFilter"
+            />
+          </div>
+          <div class="moodItem">
+            <label for="sadfilter">Sad</label>
+            <input
+              type="radio"
+              name="moodFilter"
+              id="sadfilter"
+              value="Sad"
+              class="moodFilter"
+            />
+          </div>
+          <div class="moodItem">
+            <label for="frustratedfilter">Frustrated</label>
+            <input
+              type="radio"
+              name="moodFilter"
+              id="frustratedfilter"
+              value="Frustrated"
+              class="moodFilter"
+            />
+          </div>
+          <div class="moodItem">
+            <label for="confidentfilter">Condifent</label>
+            <input
+              type="radio"
+              name="moodFilter"
+              id="confidentfilter"
+              value="Confident"
+              class="moodFilter"
+            />
+          </div>
+          <div class="moodItem">
+            <label for="neutralfilter">Neutral</label>
+            <input
+              type="radio"
+              name="moodFilter"
+              id="neutralfilter"
+              value="Neutral"
+              class="moodFilter"
+            />
+          </div>
+        </div>
+      </fieldset>
+    </form>
+    <br />
     <div class="journal_log_header"><h1>Journal Entry Log</h1></div>
-    <article class="entryLog">
-      
-    </article>
+    <article class="entryLog"></article>
     <script type="module" src="scripts/journal.js"></script>
   </body>
 </html>

@@ -21,4 +21,4 @@ const RENDER = {
   }
 };
 
-export { RENDER };
+export { RENDER, journalLog };

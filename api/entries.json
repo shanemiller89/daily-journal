@@ -18,22 +18,29 @@
       "entry_date": "6/4/19",
       "entry_title": "Functions and Objects...",
       "entry_text": "Today we went more in depth into functions and objects. We went over targeting objects, and utilizing functions. I had a lot of issues with the practice work. I didn't even know where to start. This would be a good time to remember about breaking down the problem into small components and tackling each one by a one-on-one basis.",
-      "entry_mood": "Frusterated",
+      "entry_mood": "Frustrated",
       "id": 3
     },
     {
-      "entry_date": "2019-06-26",
-      "entry_title": "aaa",
-      "entry_text": "aaa",
-      "entry_mood": "happy",
+      "entry_date": "2019-06-02",
+      "entry_title": "So Sad",
+      "entry_text": "Sad Test",
+      "entry_mood": "Sad",
       "id": 4
     },
     {
-      "entry_date": "2019-06-04",
-      "entry_title": "Test",
-      "entry_text": "Test",
-      "entry_mood": "happy",
+      "entry_date": "2019-06-02",
+      "entry_title": "So Neutral",
+      "entry_text": "Neurtal Test",
+      "entry_mood": "Neutral",
       "id": 5
+    },
+    {
+      "entry_date": "2019-06-02",
+      "entry_title": "So Happy",
+      "entry_text": "Super Happy Test",
+      "entry_mood": "Happy",
+      "id": 6
     }
   ]
 }
