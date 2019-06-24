@@ -31,6 +31,10 @@ submitBtn.addEventListener("click", () => {
       moodSelectInput
     );
     RENDER.saveJournalEntry(newJournalEntry);
+    journalDateInput.value = "";
+    conceptsCoveredInput.value = "";
+    journalEntryInput.value = "";
+    moodSelectInput.value = "default";
   } else {
     alert("Please finish filling out your Journal!");
   }

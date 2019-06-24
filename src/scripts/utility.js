@@ -28,7 +28,7 @@ const UTILITY = {
       alert("Please provide a 'Journal Entry!'");
       journalEntryInput.focus();
       return false;
-    } else if (moodSelectInput.value == "") {
+    } else if (moodSelectInput.value == "default") {
       alert("Please provide your mood!");
       moodSelectInput.focus();
       return false;
