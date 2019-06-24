@@ -20,6 +20,13 @@
       "entry_text": "Today we went more in depth into functions and objects. We went over targeting objects, and utilizing functions. I had a lot of issues with the practice work. I didn't even know where to start. This would be a good time to remember about breaking down the problem into small components and tackling each one by a one-on-one basis.",
       "entry_mood": "Frustrated",
       "id": 3
+    },
+    {
+      "entry_date": "2019-06-21",
+      "entry_title": "Deleting, Frm Validation, and filtering",
+      "entry_text": "We've went over a lot this week. So far I'm understanding most of the concepts we did, but I'm running behind on some of the practices. I am proud that I got the filtering working in the Journal. The delete was an a difficult task. I had to refactor the journal entry to component using document fragments... fun.",
+      "entry_mood": "Neutral",
+      "id": 4
     }
   ]
 }

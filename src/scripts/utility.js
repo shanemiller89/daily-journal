@@ -37,7 +37,7 @@ const UTILITY = {
     }
   },
   formValidationChar: function() {
-    let allowedChar = /^[0-9a-zA-Z()/{}:;!?. ]+$/;
+    let allowedChar = /^[0-9a-zA-Z()/{}:;!?'". ]+$/;
     if (
       conceptsCoveredInput.value.match(allowedChar) &&
       journalEntryInput.value.match(allowedChar)
