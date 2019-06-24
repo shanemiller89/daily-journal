@@ -14,6 +14,15 @@ const API = {
       body: JSON.stringify(entry)
     });
   },
+  deleteJournalEntry: function (id) {
+    return fetch(`http://localhost:8088/collectionJournalEntries/${id}`, {
+      method: "DELETE",
+      headers:{
+        "Content-Type": "application/json"
+      }
+    })
+
+  }
 };
 
 export {API}
