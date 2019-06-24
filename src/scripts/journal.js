@@ -31,6 +31,10 @@ submitBtn.addEventListener("click", () => {
       moodSelectInput
     );
     RENDER.saveJournalEntry(newJournalEntry);
+    journalDateInput.value = "";
+    conceptsCoveredInput.value = "";
+    journalEntryInput.value = "";
+    moodSelectInput.value = "default";
   } else {
     alert("Please finish filling out your Journal!");
   }
@@ -40,13 +44,13 @@ submitBtn.addEventListener("click", () => {
 
 const radioBtns = document.getElementsByName("moodFilter");
 
-radioBtns.forEach( radioBtn => {
+radioBtns.forEach( radioBtn => { 
     radioBtn.addEventListener("click", event => {
         const mood = event.target.value;
         API.getJournalEntries()
         .then(entries_obj => {
           journalLog.innerHTML = "";
-          let filteredEntry = entries_obj.filter( entry => entry.entry_mood === mood)
+          let filteredEntry = entries_obj.filter( entry => entry.entry_mood === mood) 
           RENDER.insertComponent(filteredEntry);
         })
     })

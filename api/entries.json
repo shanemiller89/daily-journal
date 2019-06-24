@@ -22,25 +22,11 @@
       "id": 3
     },
     {
-      "entry_date": "2019-06-02",
-      "entry_title": "So Sad",
-      "entry_text": "Sad Test",
-      "entry_mood": "Sad",
-      "id": 4
-    },
-    {
-      "entry_date": "2019-06-02",
-      "entry_title": "So Neutral",
-      "entry_text": "Neurtal Test",
+      "entry_date": "2019-06-21",
+      "entry_title": "Deleting, Frm Validation, and filtering",
+      "entry_text": "We've went over a lot this week. So far I'm understanding most of the concepts we did, but I'm running behind on some of the practices. I am proud that I got the filtering working in the Journal. The delete was an a difficult task. I had to refactor the journal entry to component using document fragments... fun.",
       "entry_mood": "Neutral",
-      "id": 5
-    },
-    {
-      "entry_date": "2019-06-02",
-      "entry_title": "So Happy",
-      "entry_text": "Super Happy Test",
-      "entry_mood": "Happy",
-      "id": 6
+      "id": 4
     }
   ]
 }
