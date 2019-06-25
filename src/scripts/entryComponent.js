@@ -1,4 +1,5 @@
 import { API } from "./data.js";
+// import { EVENTS } from "./events.js"; until I can figure out function issue
 import { UTILITY } from "./utility.js";
 
 
@@ -107,6 +108,7 @@ const BUILD = {
           updatedEntry.id = journalEntry.id
           API.editJournalEntry(updatedEntry)
         });
+        // EVENTS.editSaveButton(editSave); Should work, doesn't
         return editDiv;
       }
     };

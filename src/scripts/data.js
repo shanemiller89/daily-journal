@@ -21,8 +21,7 @@ const API = {
       headers: {
         "Content-Type": "application/json"
       }
-    })
-    .then(API.getAndUpdate);
+    }).then(API.getAndUpdate);
   },
   editJournalEntry: function(entry) {
     fetch(`http://localhost:8088/collectionJournalEntries/${entry.id}`, {
@@ -31,23 +30,24 @@ const API = {
         "Content-Type": "application/json"
       },
       body: JSON.stringify(entry)
-    }).then(response => response.json())
-    .then(API.getAndUpdate);
+    })
+      .then(response => response.json())
+      .then(API.getAndUpdate);
   },
-  getAndUpdate: function () {
+  getAndUpdate: function() {
     return API.getJournalEntries().then(entries_obj => {
-    journalLog.innerHTML = "";
-    RENDER.insertComponent(entries_obj);
-  });    
-},
-saveJournalEntry: function(entry) {
-  return API.postJournalEntry(entry)
-    .then(API.getJournalEntries)
-    .then(entries_obj => {
       journalLog.innerHTML = "";
       RENDER.insertComponent(entries_obj);
     });
-}
+  },
+  saveJournalEntry: function(entry) {
+    return API.postJournalEntry(entry)
+      .then(API.getJournalEntries)
+      .then(entries_obj => {
+        journalLog.innerHTML = "";
+        RENDER.insertComponent(entries_obj);
+      });
+  }
 };
 
 export { API };
