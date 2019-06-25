@@ -88,11 +88,15 @@ h1 {
 .moodContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-around
+  justify-content: space-around;
 }
 
 .moodItem {
   display: flex;
   align-items: center;
   width: 50px;
+}
+
+.entry_text {
+  word-wrap: break-word;
 }

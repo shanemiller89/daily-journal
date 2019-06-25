@@ -30,7 +30,7 @@ submitBtn.addEventListener("click", () => {
       journalEntryInput,
       moodSelectInput
     );
-    RENDER.saveJournalEntry(newJournalEntry);
+    API.saveJournalEntry(newJournalEntry);
     journalDateInput.value = "";
     conceptsCoveredInput.value = "";
     journalEntryInput.value = "";

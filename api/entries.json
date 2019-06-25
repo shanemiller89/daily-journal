@@ -27,13 +27,6 @@
       "entry_text": "We've went over a lot this week. So far I'm understanding most of the concepts we did, but I'm running behind on some of the practices. I am proud that I got the filtering working in the Journal. The delete was an a difficult task. I had to refactor the journal entry to component using document fragments... fun.",
       "entry_mood": "Neutral",
       "id": 4
-    },
-    {
-      "entry_date": "2019-06-05",
-      "entry_title": "More EDITS!",
-      "entry_text": "THIS IS AN EDIT",
-      "entry_mood": "Sad",
-      "id": 5
     }
   ]
 }

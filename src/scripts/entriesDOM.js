@@ -1,5 +1,4 @@
 import { BUILD } from "./entryComponent.js";
-import { API } from "./data.js";
 
 // -- Inserts Component into DOM -- //
 
@@ -10,15 +9,8 @@ const RENDER = {
     for (let i = 0; i < journalObj.length; i++) {
       journalLog.appendChild(BUILD.makeJournalEntryComponent(journalObj[i]));
     }
-  },
-  saveJournalEntry: function(entry) {
-    return API.postJournalEntry(entry)
-      .then(API.getJournalEntries)
-      .then(entries_obj => {
-        journalLog.innerHTML = "";
-        RENDER.insertComponent(entries_obj);
-      });
   }
 };
 
 export { RENDER, journalLog };
+

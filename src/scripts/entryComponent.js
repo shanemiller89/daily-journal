@@ -22,6 +22,7 @@ const BUILD = {
     h2Title.innerHTML= "Concepts Covered: "
     divTitle.innerHTML = `${journalEntry.entry_title}`;
     h2Entry.innerHTML = "Journal Entry: ";
+    divEntry.setAttribute("class", "entry_text")
     divEntry.innerHTML = `${journalEntry.entry_text}`;
     h2Mood.innerHTML = "Current Mood: ";
     divMood.innerHTML = `${journalEntry.entry_mood}`;
@@ -33,7 +34,6 @@ const BUILD = {
     deleteBtn.addEventListener("click", () => {
       let id = event.target.id;
       API.deleteJournalEntry(id);
-      window.location.reload();
     });
     editBtn.addEventListener("click", () => {
       divContainer.appendChild(BUILD.editFormComponent(journalEntry));
@@ -105,8 +105,7 @@ const BUILD = {
             moodSelectInput
           );
           updatedEntry.id = journalEntry.id
-          API.editJournalEntry(updatedEntry);
-          window.location.reload();
+          API.editJournalEntry(updatedEntry)
         });
         return editDiv;
       }
@@ -130,15 +129,3 @@ export { BUILD };
 //   <div><button id="deleteBtn-${journalEntry.id}" class="delete-btn">Delete</button></div>
 // </div>
 //   `;
-// let editDate = document.createElement("input")
-// let editConcept = document.createElement("input");
-// editDate.setAttribute("type", "date");
-// editDate.setAttribute("name", "journalDate")
-// editDate.setAttribute("id", `journalDate-${journalEntry.id}`)
-// editDate.setAttribute("value", `${journalEntry.entry_date}`);
-// editConcept.setAttribute("type", "text");
-// editConcept.setAttribute("name", "conceptsCovered");
-// editConcept.setAttribute("id", `conceptsCovered-${journalEntry.id}`);
-// editConcept.value = `${journalEntry.entry_title}`;
-// editDiv.appendChild(editDate);
-// editDiv.appendChild(editConcept);
