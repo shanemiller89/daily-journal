@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: Helvetica, Arial, sans-serif
+}
+
+.header_h1 {
+  margin: 20px 0 20px 15px;
+}
+
 /* Style Buttons */
 button {
   height: 50px;
@@ -32,6 +40,24 @@ label {
   padding: 5px;
 }
 
+/* Journal Entry EDIT Input Box */
+
+.editForm {
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.editFieldset {
+  display: flex;
+  flex-direction: column;
+  width: 425px;
+  padding: 10px;
+}
+
+/* .editLabel {
+  padding: 5px;
+} */
+
 /* Modyify Journal Entry Display */
 
 .journal_log_header {
@@ -40,7 +66,7 @@ label {
 }
 
 h1 {
-  align-content: center
+  margin: 0 auto;
 }
 
 .journal_entry {
