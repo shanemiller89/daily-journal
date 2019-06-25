@@ -6,7 +6,8 @@ import {
   journalEntryInput,
   moodSelectInput
 } from "./utility.js";
-import { RENDER, journalLog } from "./entriesDOM.js";
+import { RENDER } from "./entriesDOM.js";
+import { EVENTS } from "./events.js";
 
 // -- Initial Load --//
 
@@ -40,18 +41,6 @@ submitBtn.addEventListener("click", () => {
   }
 });
 
-//--Radio Filter --//
+//-- Mood Filter --//
 
-const radioBtns = document.getElementsByName("moodFilter");
-
-radioBtns.forEach( radioBtn => { 
-    radioBtn.addEventListener("click", event => {
-        const mood = event.target.value;
-        API.getJournalEntries()
-        .then(entries_obj => {
-          journalLog.innerHTML = "";
-          let filteredEntry = entries_obj.filter( entry => entry.entry_mood === mood) 
-          RENDER.insertComponent(filteredEntry);
-        })
-    })
-});
+EVENTS.moodFilter();

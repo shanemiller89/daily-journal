@@ -80,11 +80,11 @@ const BUILD = {
       <label for="moodSelect">How are you feeling today?</label>
       <select id="moodSelectEdit">
         <option value="default"></option>
-        <option value="Happy">Happy</option>
-        <option value="Sad">Sad</option>
-        <option value="Frustrated">Frustrated</option>
-        <option value="Confident">Confident</option>
-        <option value="Neutral">Neutral</option>
+        <option value="Happy" ${journalEntry.entry_mood === "Happy" ? "selected" : ""}>Happy</option>
+        <option value="Sad" ${journalEntry.entry_mood === "Sad" ? "selected" : ""}>Sad</option>
+        <option value="Frustrated" ${journalEntry.entry_mood === "Frustrated" ? "selected" : ""}>Frustrated</option>
+        <option value="Confident" ${journalEntry.entry_mood === "Confident" ? "selected" : ""}>Confident</option>
+        <option value="Neutral" ${journalEntry.entry_mood === "Neutral" ? "selected" : ""}>Neutral</option>
         </select>
         </fieldset>
         </form>
