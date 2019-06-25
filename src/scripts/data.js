@@ -1,3 +1,4 @@
+import { RENDER, journalLog } from "./entriesDOM.js";
 
 const API = {
   getJournalEntries: function() {
@@ -14,15 +15,39 @@ const API = {
       body: JSON.stringify(entry)
     });
   },
-  deleteJournalEntry: function (id) {
+  deleteJournalEntry: function(id) {
     return fetch(`http://localhost:8088/collectionJournalEntries/${id}`, {
       method: "DELETE",
-      headers:{
+      headers: {
         "Content-Type": "application/json"
       }
+    }).then(API.getAndUpdate);
+  },
+  editJournalEntry: function(entry) {
+    fetch(`http://localhost:8088/collectionJournalEntries/${entry.id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(entry)
     })
-
+      .then(response => response.json())
+      .then(API.getAndUpdate);
+  },
+  getAndUpdate: function() {
+    return API.getJournalEntries().then(entries_obj => {
+      journalLog.innerHTML = "";
+      RENDER.insertComponent(entries_obj);
+    });
+  },
+  saveJournalEntry: function(entry) {
+    return API.postJournalEntry(entry)
+      .then(API.getJournalEntries)
+      .then(entries_obj => {
+        journalLog.innerHTML = "";
+        RENDER.insertComponent(entries_obj);
+      });
   }
 };
 
-export {API}
+export { API };

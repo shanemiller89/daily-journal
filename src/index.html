@@ -8,99 +8,102 @@
     <link rel="stylesheet" href="styles/journal.css" />
   </head>
   <body>
-    <form action="">
-      <fieldset>
-        <label for="journalDate">Date of entry</label>
-        <input type="date" name="journalDate" id="journalDate" />
-      </fieldset>
-      <fieldset>
-        <label for="conceptsCovered">Concepts covered</label>
-        <input type="text" name="conceptsCovered" id="conceptsCovered" />
-      </fieldset>
-      <fieldset>
-        <label for="journalEntry">Journal Entry</label>
-        <textarea
-          name="journalEntry"
-          id="journalEntry"
-          placeholder="What did you learn today?"
-          cols="50"
-          rows="5"
-        ></textarea>
-      </fieldset>
-      <fieldset>
-        <label for="moodSelect">How are you feeling today?</label>
-        <select id="moodSelect">
-          <option value="default"></option>
-          <option value="Happy">Happy</option>
-          <option value="Sad">Sad</option>
-          <option value="Frustrated">Frustrated</option>
-          <option value="Confident">Confident</option>
-          <option value="Neutral">Neutral</option>
-        </select>
-      </fieldset>
-      <button type="submit" class="submit-btn">Record Journal Entry</button>
-    </form>
-    <br />
-    <form>
-      <fieldset>
-        <legend>Filter Journals By Mood</legend>
-        <div class="moodContainer">
-          <div class="moodItem">
-            <label for="happyfilter">Happy</label>
-            <input
-              type="radio"
-              name="moodFilter"
-              id="happyfilter"
-              value="Happy"
-              class="moodFilter"
-            />
+    <div class="main_container">
+      <div class="input_container">
+        <h1 class="header_h1">Daily Journal Entry Form</h1>
+        <form action="" class="main_form">
+          <fieldset>
+            <label for="journalDate">Date of entry</label>
+            <input type="date" name="journalDate" id="journalDate" />
+          </fieldset>
+          <fieldset>
+            <label for="conceptsCovered">Concepts covered</label>
+            <input type="text" name="conceptsCovered" id="conceptsCovered" class="concept_input" />
+          </fieldset>
+          <fieldset>
+            <label for="journalEntry">Journal Entry</label>
+            <textarea
+              name="journalEntry"
+              id="journalEntry"
+              placeholder="What did you learn today?"
+            ></textarea>
+          </fieldset>
+          <fieldset>
+            <label for="moodSelect">How are you feeling today?</label>
+            <select id="moodSelect">
+              <option value="default"></option>
+              <option value="Happy">Happy</option>
+              <option value="Sad">Sad</option>
+              <option value="Frustrated">Frustrated</option>
+              <option value="Confident">Confident</option>
+              <option value="Neutral">Neutral</option>
+            </select>
+          </fieldset>
+          <button type="submit" class="submit-btn">Record Journal Entry</button>
+        </form>
+      </div>
+      <br />
+      <form class="filter_form">
+        <fieldset class="filter_fieldset">
+          <legend>Filter Journals By Mood</legend>
+          <div class="moodContainer">
+            <div class="moodItem">
+              <label for="happyfilter">Happy</label>
+              <input
+                type="radio"
+                name="moodFilter"
+                id="happyfilter"
+                value="Happy"
+                class="moodFilter"
+              />
+            </div>
+            <div class="moodItem">
+              <label for="sadfilter">Sad</label>
+              <input
+                type="radio"
+                name="moodFilter"
+                id="sadfilter"
+                value="Sad"
+                class="moodFilter"
+              />
+            </div>
+            <div class="moodItem">
+              <label for="frustratedfilter">Frustrated</label>
+              <input
+                type="radio"
+                name="moodFilter"
+                id="frustratedfilter"
+                value="Frustrated"
+                class="moodFilter"
+              />
+            </div>
+            <div class="moodItem">
+              <label for="confidentfilter">Condifent</label>
+              <input
+                type="radio"
+                name="moodFilter"
+                id="confidentfilter"
+                value="Confident"
+                class="moodFilter"
+              />
+            </div>
+            <div class="moodItem">
+              <label for="neutralfilter">Neutral</label>
+              <input
+                type="radio"
+                name="moodFilter"
+                id="neutralfilter"
+                value="Neutral"
+                class="moodFilter"
+              />
+            </div>
           </div>
-          <div class="moodItem">
-            <label for="sadfilter">Sad</label>
-            <input
-              type="radio"
-              name="moodFilter"
-              id="sadfilter"
-              value="Sad"
-              class="moodFilter"
-            />
-          </div>
-          <div class="moodItem">
-            <label for="frustratedfilter">Frustrated</label>
-            <input
-              type="radio"
-              name="moodFilter"
-              id="frustratedfilter"
-              value="Frustrated"
-              class="moodFilter"
-            />
-          </div>
-          <div class="moodItem">
-            <label for="confidentfilter">Condifent</label>
-            <input
-              type="radio"
-              name="moodFilter"
-              id="confidentfilter"
-              value="Confident"
-              class="moodFilter"
-            />
-          </div>
-          <div class="moodItem">
-            <label for="neutralfilter">Neutral</label>
-            <input
-              type="radio"
-              name="moodFilter"
-              id="neutralfilter"
-              value="Neutral"
-              class="moodFilter"
-            />
-          </div>
-        </div>
-      </fieldset>
-    </form>
-    <br />
-    <div class="journal_log_header"><h1>Journal Entry Log</h1></div>
-    <article class="entryLog"></article>
+        </fieldset>
+      </form>
+      <br />
+      <div class="journal_log_header"><h1>Journal Entry Log</h1></div>
+      <article class="entryLog"></article>
+    </div>
     <script type="module" src="scripts/journal.js"></script>
   </body>
 </html>
