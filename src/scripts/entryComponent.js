@@ -1,9 +1,9 @@
 import { API } from "./data.js";
 import { UTILITY } from "./utility.js";
 
-// -- Creates Entries -- //
 
 const BUILD = {
+  // -- Creates Entries -- //
   makeJournalEntryComponent: function(journalEntry) {
     let documentFragment = document.createDocumentFragment();
     let divContainer = document.createElement("div");
@@ -52,6 +52,7 @@ const BUILD = {
     documentFragment.appendChild(divContainer)
     return documentFragment;
   },
+  //-- EDITS ENTRY COMPONENT --//
   editFormComponent: function(journalEntry) {
     let editDiv = document.createElement("div");
     let editSave = document.createElement("button");
