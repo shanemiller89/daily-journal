@@ -150,8 +150,9 @@ h1 {
   border: 1px solid black;
 }
 
-.moodItem {
+/* .moodItem {
   display: flex;
   align-items: center;
   width: 50px;
-}
+  font: 12px;
+} */
