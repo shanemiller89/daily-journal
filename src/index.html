@@ -14,11 +14,11 @@
         <form action="" class="main_form">
           <fieldset>
             <label for="journalDate">Date of entry</label>
-            <input type="date" name="journalDate" id="journalDate" />
+            <input type="date" name="journalDate" id="journalDate" class="submitInput"/>
           </fieldset>
           <fieldset>
             <label for="conceptsCovered">Concepts covered</label>
-            <input type="text" name="conceptsCovered" id="conceptsCovered" class="concept_input" />
+            <input type="text" name="conceptsCovered" id="conceptsCovered" class="submitInput" />
           </fieldset>
           <fieldset>
             <label for="journalEntry">Journal Entry</label>
@@ -26,11 +26,12 @@
               name="journalEntry"
               id="journalEntry"
               placeholder="What did you learn today?"
+              class="textareaInput"
             ></textarea>
           </fieldset>
           <fieldset>
             <label for="moodSelect">How are you feeling today?</label>
-            <select id="moodSelect">
+            <select id="moodSelect" class="submitInput">
               <option value="default"></option>
               <option value="Happy">Happy</option>
               <option value="Sad">Sad</option>

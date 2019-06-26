@@ -20,22 +20,22 @@ const EVENTS = {
       });
     });
   },
-  // editSaveButton: function(button) {
-  //   button.addEventListener("click", () => {
-  //     let journalDateInput = document.querySelector("#journalDateEdit");
-  //     let conceptsCoveredInput = document.querySelector("#conceptsCoveredEdit");
-  //     let journalEntryInput = document.querySelector("#journalEntryEdit");
-  //     let moodSelectInput = document.querySelector("#moodSelectEdit");
-  //     let updatedEntry = UTILITY.createNewEntry(
-  //       journalDateInput,
-  //       conceptsCoveredInput,
-  //       journalEntryInput,
-  //       moodSelectInput
-  //     );
-  //     updatedEntry.id = journalEntry.id;
-  //     API.editJournalEntry(updatedEntry)
-  //   });
-  // } Will Come back too
+  editSaveButton: function(button, journalEntry) {
+    button.addEventListener("click", () => {
+      let journalDateInput = document.querySelector("#journalDateEdit");
+      let conceptsCoveredInput = document.querySelector("#conceptsCoveredEdit");
+      let journalEntryInput = document.querySelector("#journalEntryEdit");
+      let moodSelectInput = document.querySelector("#moodSelectEdit");
+      let updatedEntry = UTILITY.createNewEntry(
+        journalDateInput,
+        conceptsCoveredInput,
+        journalEntryInput,
+        moodSelectInput
+      );
+      updatedEntry.id = journalEntry.id;
+      API.editJournalEntry(updatedEntry).then(newdata => newdata.json()).then(API.getAndUpdate);
+    });
+  }
 };
 
 export { EVENTS };

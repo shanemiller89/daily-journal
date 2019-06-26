@@ -70,16 +70,20 @@ label {
   padding: 5px;
 }
 
-input {
+.submitInput {
   border-radius: 3px;
   width: 100%;
   height: 30px;
 }
 
-textarea {
+.textareaInput {
   border-radius: 3px;
   width: 100%;
   height: 150px;
+}
+
+select {
+  background: white;
 }
 
 /* Journal Entry EDIT Input Box */
@@ -145,14 +149,12 @@ h1 {
 .filter_fieldset {
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 450px;
   padding: 10px;
   border: 1px solid black;
 }
 
-/* .moodItem {
-  display: flex;
-  align-items: center;
-  width: 50px;
-  font: 12px;
-} */
+.moodFilter {
+  width: 80%;
+  height: 20px;
+}
