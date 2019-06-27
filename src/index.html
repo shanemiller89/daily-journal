@@ -14,11 +14,21 @@
         <form action="" class="main_form">
           <fieldset>
             <label for="journalDate">Date of entry</label>
-            <input type="date" name="journalDate" id="journalDate" />
+            <input
+              type="date"
+              name="journalDate"
+              id="journalDate"
+              class="submitInput"
+            />
           </fieldset>
           <fieldset>
             <label for="conceptsCovered">Concepts covered</label>
-            <input type="text" name="conceptsCovered" id="conceptsCovered" class="concept_input" />
+            <input
+              type="text"
+              name="conceptsCovered"
+              id="conceptsCovered"
+              class="submitInput"
+            />
           </fieldset>
           <fieldset>
             <label for="journalEntry">Journal Entry</label>
@@ -26,11 +36,12 @@
               name="journalEntry"
               id="journalEntry"
               placeholder="What did you learn today?"
+              class="textareaInput"
             ></textarea>
           </fieldset>
           <fieldset>
             <label for="moodSelect">How are you feeling today?</label>
-            <select id="moodSelect">
+            <select id="moodSelect" class="submitInput">
               <option value="default"></option>
               <option value="Happy">Happy</option>
               <option value="Sad">Sad</option>
@@ -43,63 +54,81 @@
         </form>
       </div>
       <br />
-      <form class="filter_form">
-        <fieldset class="filter_fieldset">
-          <legend>Filter Journals By Mood</legend>
-          <div class="moodContainer">
-            <div class="moodItem">
-              <label for="happyfilter">Happy</label>
+      <div class="miscForms">
+        <div class="filterBox">
+          <form class="filter_form">
+            <fieldset class="filter_fieldset">
+              <legend>Filter Journals By Mood</legend>
+              <div class="moodContainer">
+                <div class="moodItem">
+                  <label for="happyfilter">Happy</label>
+                  <input
+                    type="radio"
+                    name="moodFilter"
+                    id="happyfilter"
+                    value="Happy"
+                    class="moodFilter"
+                  />
+                </div>
+                <div class="moodItem">
+                  <label for="sadfilter">Sad</label>
+                  <input
+                    type="radio"
+                    name="moodFilter"
+                    id="sadfilter"
+                    value="Sad"
+                    class="moodFilter"
+                  />
+                </div>
+                <div class="moodItem">
+                  <label for="frustratedfilter">Frustrated</label>
+                  <input
+                    type="radio"
+                    name="moodFilter"
+                    id="frustratedfilter"
+                    value="Frustrated"
+                    class="moodFilter"
+                  />
+                </div>
+                <div class="moodItem">
+                  <label for="confidentfilter">Condifent</label>
+                  <input
+                    type="radio"
+                    name="moodFilter"
+                    id="confidentfilter"
+                    value="Confident"
+                    class="moodFilter"
+                  />
+                </div>
+                <div class="moodItem">
+                  <label for="neutralfilter">Neutral</label>
+                  <input
+                    type="radio"
+                    name="moodFilter"
+                    id="neutralfilter"
+                    value="Neutral"
+                    class="moodFilter"
+                  />
+                </div>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+        <div class="searchBox">
+          <form class="search_form">
+            <fieldset class="search_fieldset">
+              <legend>Search Journal Entries</legend>
+              <label for="searchInput"></label>
               <input
-                type="radio"
-                name="moodFilter"
-                id="happyfilter"
-                value="Happy"
-                class="moodFilter"
+                type="search"
+                name="searhInput"
+                id="searchInput"
+                class="searchInput"
               />
-            </div>
-            <div class="moodItem">
-              <label for="sadfilter">Sad</label>
-              <input
-                type="radio"
-                name="moodFilter"
-                id="sadfilter"
-                value="Sad"
-                class="moodFilter"
-              />
-            </div>
-            <div class="moodItem">
-              <label for="frustratedfilter">Frustrated</label>
-              <input
-                type="radio"
-                name="moodFilter"
-                id="frustratedfilter"
-                value="Frustrated"
-                class="moodFilter"
-              />
-            </div>
-            <div class="moodItem">
-              <label for="confidentfilter">Condifent</label>
-              <input
-                type="radio"
-                name="moodFilter"
-                id="confidentfilter"
-                value="Confident"
-                class="moodFilter"
-              />
-            </div>
-            <div class="moodItem">
-              <label for="neutralfilter">Neutral</label>
-              <input
-                type="radio"
-                name="moodFilter"
-                id="neutralfilter"
-                value="Neutral"
-                class="moodFilter"
-              />
-            </div>
-          </div>
-        </fieldset>
-      </form>
+            </fieldset>
+          </form>
+        </div>
+      </div>
       <br />
       <div class="journal_log_header"><h1>Journal Entry Log</h1></div>
       <article class="entryLog"></article>

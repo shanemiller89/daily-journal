@@ -7,6 +7,7 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   background: slategray;
+  color: rgb(86, 95, 104)
 }
 
 .main_container {
@@ -54,8 +55,10 @@ button {
 
 .main_form {
   font-weight: bold;
-  font-size: 1em;
-  border: 3px double slategray
+  font-size: 1.25em;
+  border: 3px double slategray;
+  border-radius: 8px;
+  background-color: whitesmoke;
 }
 
 fieldset {
@@ -70,16 +73,20 @@ label {
   padding: 5px;
 }
 
-input {
+.submitInput {
   border-radius: 3px;
   width: 100%;
   height: 30px;
 }
 
-textarea {
+.textareaInput {
   border-radius: 3px;
   width: 100%;
   height: 150px;
+}
+
+select {
+  background: white;
 }
 
 /* Journal Entry EDIT Input Box */
@@ -87,6 +94,10 @@ textarea {
 .editForm {
   margin-top: 20px;
   margin-left: 20px;
+  border: 1px solid black;
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .editFieldset {
@@ -100,7 +111,7 @@ textarea {
   padding: 5px;
 } */
 
-/* Modyify Journal Entry Display */
+/* Modify Journal Entry Display */
 
 .journal_log_header {
   display: flex;
@@ -112,10 +123,12 @@ h1 {
 }
 
 .journal_entry {
-  border: 5px double black;
+  border: 5px double slategray;
   width: 500px;
-  margin: 10px 0px 10px 0;
+  margin: 10px 0px 50px 0;
   padding: 10px;
+  border-radius: 8px;
+  background-color: whitesmoke;
 }
 
 .entryLog {
@@ -139,20 +152,50 @@ h1 {
 
 .filter_form {
   margin-top: 20px;
-  margin-left: 20px;
 }
 
 .filter_fieldset {
   display: flex;
   flex-direction: column;
-  width: 800px;
+  width: 500px;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid slategray;
+  height: 100px;
+  border-radius: 5px;
+  background-color: whitesmoke;
 }
 
-/* .moodItem {
+.moodFilter {
+  width: 80%;
+  height: 20px;
+}
+
+/* Search Field */
+
+.search_form {
+  margin-top: 20px;
+}
+
+.search_fieldset {
   display: flex;
+  flex-direction: column;
+  width: 500px;
+  padding: 10px;
+  border: 1px solid slategray;
+  height: 100px;
+  border-radius: 5px;
+  background-color: whitesmoke;
+}
+
+.searchInput {
+  border-radius: 3px;
+  width: 100%;
+  height: 30px;
+}
+
+.miscForms {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
-  width: 50px;
-  font: 12px;
-} */
+}

@@ -1,7 +1,5 @@
 import { API } from "./data.js";
-// import { EVENTS } from "./events.js"; until I can figure out function issue
-import { UTILITY } from "./utility.js";
-
+import { EVENTS } from "./events.js";
 
 const BUILD = {
   // -- Creates Entries -- //
@@ -34,7 +32,7 @@ const BUILD = {
     divContainer.setAttribute("class", "journal_entry");
     deleteBtn.addEventListener("click", () => {
       let id = event.target.id;
-      API.deleteJournalEntry(id);
+      API.deleteJournalEntry(id).then(API.getAndUpdate);
     });
     editBtn.addEventListener("click", () => {
       divContainer.appendChild(BUILD.editFormComponent(journalEntry));
@@ -94,21 +92,7 @@ const BUILD = {
         editSave.textContent = "Save";
         editSave.setAttribute("id", `${journalEntry.id}`)
         editDiv.appendChild(editSave);
-        editSave.addEventListener("click", () => {
-          let journalDateInput = document.querySelector("#journalDateEdit");
-          let conceptsCoveredInput = document.querySelector("#conceptsCoveredEdit");
-          let journalEntryInput = document.querySelector("#journalEntryEdit");
-          let moodSelectInput = document.querySelector("#moodSelectEdit");
-          let updatedEntry = UTILITY.createNewEntry(
-            journalDateInput,
-            conceptsCoveredInput,
-            journalEntryInput,
-            moodSelectInput
-          );
-          updatedEntry.id = journalEntry.id
-          API.editJournalEntry(updatedEntry)
-        });
-        // EVENTS.editSaveButton(editSave); Should work, doesn't
+        EVENTS.editSaveButton(editSave, journalEntry);
         return editDiv;
       }
     };

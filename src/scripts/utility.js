@@ -37,15 +37,16 @@ const UTILITY = {
     }
   },
   formValidationChar: function() {
-    let allowedChar = /^[0-9a-zA-Z()/{}:;!?'". ]+$/;
+    // let allowedChar = /^[0-9a-zA-Z()/{}:;!?'". ]+$/;
+    let blackListChar = /[@#$%^&*|\+=_-]/;
     if (
-      conceptsCoveredInput.value.match(allowedChar) &&
-      journalEntryInput.value.match(allowedChar)
+      conceptsCoveredInput.value.match(blackListChar) &&
+      journalEntryInput.value.match(blackListChar)
     ) {
-      return true;
-    } else {
-      alert("Improper characters used");
+      alert("You used one of the following: `@ # $ % ^ & * | \ + = _ -` Remove to submit form.")
       return false;
+    } else {
+      return true;
     }
   },
   formValidationConceptLength: function() {

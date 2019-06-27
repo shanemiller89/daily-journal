@@ -8,11 +8,12 @@ import {
 } from "./utility.js";
 import { RENDER } from "./entriesDOM.js";
 import { EVENTS } from "./events.js";
+import { BUILD } from "./entryComponent.js";
 
 // -- Initial Load --//
 
-API.getJournalEntries().then(entries_obj => {
-  RENDER.insertComponent(entries_obj);
+API.getJournalEntries().then(entries => {
+  RENDER.insertComponent(entries);
 });
 
 // -- Submit Button Listener -- //
@@ -44,3 +45,7 @@ submitBtn.addEventListener("click", () => {
 //-- Mood Filter --//
 
 EVENTS.moodFilter();
+
+//--Search Box --//
+
+EVENTS.searchBox()
