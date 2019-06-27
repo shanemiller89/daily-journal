@@ -43,7 +43,7 @@ const UTILITY = {
       conceptsCoveredInput.value.match(blackListChar) &&
       journalEntryInput.value.match(blackListChar)
     ) {
-      alert("You used one of the following: `@#$%^&*|\+=_-` Remove to submit form.")
+      alert("You used one of the following: `@ # $ % ^ & * | \ + = _ -` Remove to submit form.")
       return false;
     } else {
       return true;
