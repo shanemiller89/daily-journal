@@ -27,6 +27,13 @@
       "entry_text": "We've went over a lot this week. So far I'm understanding most of the concepts we did, but I'm running behind on some of the practices. I am proud that I got the filtering working in the Journal. The delete was an a difficult task. I had to refactor the journal entry to component using document fragments... fun.",
       "entry_mood": "Neutral",
       "id": 4
+    },
+    {
+      "entry_date": "2019-06-26",
+      "entry_title": "Developer Tools and Application Building",
+      "entry_text": "This week we have gone over developer tools that help App creation and other css variables, and object and database relations. I'm starting to see the big picture now, and making those array of foods is finally starting to see a payoff. Meaning, I can see how everything is starting to relate to each other. Over all, I'm very happy with the progress I've made.",
+      "entry_mood": "Happy",
+      "id": 5
     }
   ]
 }

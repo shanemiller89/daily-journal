@@ -7,6 +7,7 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   background: slategray;
+  color: rgb(86, 95, 104)
 }
 
 .main_container {
@@ -55,7 +56,9 @@ button {
 .main_form {
   font-weight: bold;
   font-size: 1.25em;
-  border: 3px double slategray
+  border: 3px double slategray;
+  border-radius: 8px;
+  background-color: whitesmoke;
 }
 
 fieldset {
@@ -91,6 +94,10 @@ select {
 .editForm {
   margin-top: 20px;
   margin-left: 20px;
+  border: 1px solid black;
+  width: 400px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 .editFieldset {
@@ -116,10 +123,12 @@ h1 {
 }
 
 .journal_entry {
-  border: 5px double black;
+  border: 5px double slategray;
   width: 500px;
   margin: 10px 0px 50px 0;
   padding: 10px;
+  border-radius: 8px;
+  background-color: whitesmoke;
 }
 
 .entryLog {
@@ -148,10 +157,12 @@ h1 {
 .filter_fieldset {
   display: flex;
   flex-direction: column;
-  width: 450px;
+  width: 500px;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid slategray;
   height: 100px;
+  border-radius: 5px;
+  background-color: whitesmoke;
 }
 
 .moodFilter {
@@ -168,10 +179,12 @@ h1 {
 .search_fieldset {
   display: flex;
   flex-direction: column;
-  width: 450px;
+  width: 500px;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid slategray;
   height: 100px;
+  border-radius: 5px;
+  background-color: whitesmoke;
 }
 
 .searchInput {
